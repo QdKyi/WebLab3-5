@@ -1,0 +1,39 @@
+.main__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 30%;
+}
+.main__equipment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: auto;
+    margin: 20px;
+}
+.main__equipment-header {
+    height: 10%;
+    width: 100%;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+}
+.main__equipment-description-text {
+    margin-top: 10px;
+    text-align: center;
+}
+.main__equipment-price {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+}
+.main__equipment-price h3 {
+    margin-right: 5px;
+}
+.main__equipment-buttons-container {
+    display: flex;
+    justify-content: space-around;
+    width: 150px;
+    margin-bottom: 10px;
+}

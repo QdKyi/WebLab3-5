@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExtremeSportEquipment</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <div class="header__nav">
+                <h1>My Store</h1>
+                <a href="#">My Equipment</a>
+                <a href="#">Create Equipment</a>
+            </div>
+            
+            <form class="header__not_nav">
+                <input type="text" placeholder="Type something..." class="header__input" id="input__search">
+                <button type="submit" class="button__search" id="button__search">
+                    Search
+                </button>
+                <button type="reset" class="button__clear" id="button__clear">
+                    Clear
+                </button>
+            </form>
+
+        </div>
+
+    </header>
+
+    <aside>
+        <h2>Manage Equipment</h2>
+
+        <div class="aside__sort-container">
+            <h3>Sort by the most expensive equipment</h3>
+            <button class="button-sort" id="button-sort">
+                <div class="button-sort__circle" id="button-sort__circle"></div>
+            </button>
+        </div>
+
+        <div class="aside__count-container">
+            <h3>Count total expenses:</h3>
+            <button class="button-count" id="button-count">Count</button>
+            <div class="total-expenses">
+                <p>Total expenses:</p>
+                <span id="expenses-count">$</span>
+            </div>
+            <button class="button-create" id="button-create">Create</button>
+        </div>
+    </aside>
+
+    <main class="main__container" id="main__container">
+
+    </main>
+    
+    <script type='module' src="./js/main.js"></script>
+</body>
+</html>
