@@ -1,0 +1,46 @@
+.create-form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 5% auto 0;
+    justify-content: space-between;
+    height: 450px;
+}
+.create-form h2 {
+    text-align: center;
+}
+.create-form label {
+    text-align: center;
+}
+.create-button {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.modal-popup{
+    display: none;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.modal-body{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(220, 91, 91);
+    border-radius: 5px;
+}
+
+.modal-text{
+    color: white;
+    font-weight: 700;
+    margin-left: 8%;
+    text-align: center;
+    width: 85%;
+}
+
+.close-button{
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}

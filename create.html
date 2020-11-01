@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExtremeSportEquipment</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <div class="header__nav">
+                <h1>My Store</h1>
+                <a href="index.html">My Equipment</a>
+                <a href="create.html">Create Equipment</a>
+            </div>
+            
+            <form class="header__not_nav">
+                <input type="text" placeholder="Type something..." class="header__input" id="input__search">
+                <button type="submit" class="button__search" id="button__search">
+                    Search
+                </button>
+                <button type="reset" class="button__clear" id="button__clear">
+                    Clear
+                </button>
+            </form>
+
+        </div>
+
+    </header>
+
+    <div class="create-container">
+        <form class="create-form" id="create-form">
+
+            <h2 class="create-title">Create Equip</h2>
+
+            <label for="header-input">Header</label>
+            <input type="text" class="input-form" id="header-input" placeholder="Enter header...">
+
+            <label for="description-input">Description</label>
+            <textarea class="description-input" id="description-input" cols="30" rows="3"
+                placeholder="Enter description..."></textarea>
+
+            <label for="prices">Price</label>
+            <input type="number" class="input-form" id="price-input" placeholder="Enter price...">
+
+            <button class="create-button" id="create-button">Create</button>
+
+            <div class="modal-popup" id="modal-popup">
+                <div class="modal-body" id="modal-body">
+                    <p class="modal-text" id="modal-text">Incorrect values(</p>
+                    <span class="close-button" id="close-button">&times;</span>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    </main>
+    
+    <script type='module' src="./js/create.js"></script>
+</body>
+</html>

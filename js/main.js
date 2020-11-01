@@ -30,7 +30,7 @@ const equipHTMLTemplate = ({
         <h3>${price}$</h3>
     </div>
     <div class="main__equipment-buttons-container">
-        <button class="main__equipment-edit-button">Edit</button>
+        <a href = "edit.html" class="main__equipment-edit-button">Edit</button>
         <button class="main__equipment-remove-button">Remove</button>
     </div>
     

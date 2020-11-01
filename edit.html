@@ -29,31 +29,26 @@
 
     </header>
 
-    <aside>
-        <h2>Manage Equipment</h2>
+    <div class="edit-container">
+        <form class="edit-form" id="edit-form">
+            <h2 class="edit-title">Edit Equip</h2>
 
-        <div class="aside__sort-container">
-            <h3>Sort by the most expensive equipment</h3>
-            <button class="button-sort" id="button-sort">
-                <div class="button-sort__circle" id="button-sort__circle"></div>
-            </button>
-        </div>
+            <label for="header-input">Header</label>
+            <input type="text" class="input-form" id="header-input" placeholder="Enter header...">
 
-        <div class="aside__count-container">
-            <h3>Count total expenses:</h3>
-            <button class="button-count" id="button-count">Count</button>
-            <div class="total-expenses">
-                <p>Total expenses:</p>
-                <span id="expenses-count">$</span>
-            </div>
-            <button class="button-create" id="button-create">Create</button>
-        </div>
-    </aside>
+            <label for="description-input">Description</label>
+            <textarea class="description-input" id="description-input" cols="30" rows="3"
+                placeholder="Enter description..."></textarea>
 
-    <main class="main__container" id="main__container">
+            <label for="prices">Price</label>
+            <input type="number" class="input-form" id="price-input" placeholder="Enter price...">
+
+            <button class="edit-button" id="edit-button">Update</button>
+        </form>
+    </div>
 
     </main>
     
-    <script type='module' src="./js/main.js"></script>
+    <script type='module' src="./js/edit.js"></script>
 </body>
 </html>
