@@ -1,11 +1,13 @@
-class Equipment {
-    constructor(id, header, descriptionText, price) {
-        this.id = id;
-        this.header = header;
-        this.descriptionText = descriptionText;
-        this.price = price;
-    }
-}
+import{
+    getEquip
+} from './crud.js';
+
+import{
+    Equipment,
+    addEquipment
+} from './model.js';
+
+const ADDRESS = "http://127.0.0.1:8000/equip/"
 
 const sortButton = document.getElementById('button-sort');
 const priceButton = document.getElementById('button-count');
@@ -13,40 +15,10 @@ const createButton = document.getElementById('button-create');
 const searchButton = document.getElementById('button__search');
 const mainContainer = document.getElementById('main__container');
 const clearButton = document.getElementById('button__clear');
-const equipList = [];
+let equipList = [];
 
 var counter = 1;
 
-const equipHTMLTemplate = ({
-    id, header, descriptionText, price
-}) => `
-<div class="main__equipment" id="${id}">
-    <img src = 1.png>
-    <span class="main__equipment-header">${header}</span>
-    <div class="main__equipment-description-text">${descriptionText}</div>
-    
-    <div class="main__equipment-price">
-        <h3>Price:</h3>
-        <h3>${price}$</h3>
-    </div>
-    <div class="main__equipment-buttons-container">
-        <a href = "edit.html" class="main__equipment-edit-button">Edit</button>
-        <button class="main__equipment-remove-button">Remove</button>
-    </div>
-    
-</div>
-`;
-
-const addEquipment = ({id, header, descriptionText, price}) => 
-{
-    var equipmentContainer = document.getElementById('main__container');
-    equipmentContainer.insertAdjacentHTML('beforeend', equipHTMLTemplate({
-        id,
-        header,
-        descriptionText,
-        price
-    }));
-};
 
 function updateDOM(givenList) {
     var elements = mainContainer.querySelectorAll('.main__equipment');
@@ -54,12 +26,20 @@ function updateDOM(givenList) {
         elements[i].remove();
     }
     for (var i = 0; i < givenList.length; i++) {
-        var id = givenList.id;
+        var id = givenList[i].id;
         var header = givenList[i].header;
-        var descriptionText = givenList[i].descriptionText;
+        var descriptionText = givenList[i].description;
         var price = givenList[i].price;
-        addEquipment({id, header, descriptionText, price});
+        addEquipment({id, header, descriptionText, price}, Load);
     }
+};
+
+export const fetchAllContent = async () => {
+    const allContent = await getEquip();
+
+    equipList = allContent;
+
+    updateDOM(equipList);
 };
 
 sortButton.addEventListener('click', (event) => {
@@ -102,3 +82,11 @@ clearButton.addEventListener('click', (event) => {
     updateDOM(equipList);
 }
 );
+
+async function Load() {
+    equipList.length = 0;
+    equipList.push(...(await (await fetch(ADDRESS)).json()))
+    updateDOM(equipList);
+}
+
+window.addEventListener('load', Load)
