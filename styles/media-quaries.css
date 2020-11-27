@@ -1,0 +1,173 @@
+@media screen and (max-width: 767px) {
+	.header-play-button {
+		display: none;
+	}
+	.nav-buttons {
+		display: none;
+	}
+	.header-social {
+		position:unset;
+		transform: rotate(0deg);
+		justify-content: space-around;
+		text-align: center;
+		width: 100%;
+		
+	}
+	.header-nav {
+		justify-content: space-between;
+	}
+	.logo {
+		float: left;
+	}
+	#main-header-text {
+		font-size: 1.2em;
+		width: 100%;
+	}
+	.header-text {
+		width: 100%;
+		padding: 175px 0px 125px 0px;
+		margin-right: 10%;
+	}
+	.nav-buttons.show {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 0px;
+	}
+	.contact-button {
+		display: none;
+	}
+	.background-image {
+		height: 400px;
+	}
+	.header-text {
+		display: none;
+	}
+	.hero-section {
+		padding: 0px;
+		height: 65%;
+		margin: 0px;
+		align-items: flex-end;
+	}
+	.container {
+		height: 100%;
+	}
+
+	.intro-section {
+		flex-direction: column-reverse;
+		height: auto;
+	}
+	#intro-image {
+		position: relative;
+		margin: 10% auto 0 auto;
+		width: 80%;
+		right: 0%;
+		max-width: 354px;
+	}
+	#intro-text {
+		position: unset;
+		width: 100%;
+	}
+	#intro-text h2 {
+		margin: 15px 0px;
+		text-align: center;
+		font-size: 1.2em;
+	}
+	#intro-text p {
+		margin: 15px 5px;
+		text-align: center;
+		font-size: 0.8em;
+	}
+	.slider-dots {
+		width: 100%;
+		position: absolute;
+		justify-content: center;
+		bottom: 18px;
+		right: auto;
+		left: auto;	
+	}
+	.intro-button {
+		position: unset;
+		margin: 15px auto;
+	}
+
+
+
+	.innovative-section {
+		height: auto;
+	}
+	.about-text {
+		position: unset;
+		flex-direction: column;
+		padding: 33px 0px;
+		margin: 0px;
+	}
+	.about-text h2 {
+		font-size: 1.4em;
+		text-align: center;
+	}
+	.about-text p {
+		font-size: .8em;
+		text-align: center;
+		padding: 0px;
+		margin: 15px;
+	}
+	.about-text div {
+		flex-direction: column;
+	}
+
+
+
+	.usp-section {
+		height: auto;
+		flex-direction: column;
+	}
+	#usp-image {
+		position: unset;
+		margin: 0px auto 15px;
+		width: 80%;
+		max-width: 355px;
+	}
+	.usp-text {
+		position: unset;
+		width: 100%;
+		margin-top: 15px;
+	}
+	.usp-block-text h3 {
+		text-align: center;
+	}
+
+
+
+	.footer-container {
+		flex-direction: column;
+		justify-content: center;
+		height: auto;
+	}
+	#footer-email {
+		margin: 15px 0px;
+		text-align: center;
+	}
+	#footer-text {
+		width: 100%;
+		justify-content: space-around;
+	}
+	#footer-text p {
+		margin: 15px 0px;
+	}
+}
+
+
+@media (min-width: 768px) and (max-width: 1499px) {
+	.menu-btn {
+		display: none;
+	}
+}
+
+@media (min-width: 1499px)  {
+	body {
+		max-width: 1499px;
+		margin: auto;
+	}
+}
